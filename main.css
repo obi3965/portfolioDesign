@@ -1,0 +1,348 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Nunito', sans-serif;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+a{
+   text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+p{
+  font-size: 1.6rem;
+}
+img{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+section{
+  padding: 5rem 0;
+}
+
+/*header*/
+
+.header{
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    
+    
+}
+.container-hero{
+    width: 90%;
+    max-width: 80rem;
+    margin: 10% auto !important;
+    padding: 0 1.5rem;
+}
+.nav{
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+   position: fixed;
+   top: 0;
+   right: 0;
+  
+}
+.nav.active{
+    background: rgba(0,0,0);
+    z-index: 1500;
+}
+.nav-brand {
+    width: 130px;
+    margin-left: 30px;
+   
+}
+
+.menu-icons i{
+    font-size: 3.5rem;
+    color: #fafafa;
+    cursor: pointer;
+    margin-right: 30px;
+}
+.close i{
+    color: #eb648c;
+}
+.nav-list.active{
+    right: 0;
+}
+.nav-list{
+    width: 35%;
+    height: 100vh;
+    background: rgba(49,24,131);
+    position: absolute;
+    top: 0;
+    right: -25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 100;
+    transition: all 650ms ease-in-out;
+    
+}
+.close{
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+}
+.nav-item{
+    margin: 1.5rem 0;
+}
+.nav-link{
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #ccc;
+  /* background-color: #000; */
+  padding: 5px 10px;
+  letter-spacing: 1px;
+  display: block;
+  transform-origin: top;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform .3s;
+}
+.nav-link:hover {
+    transform: rotateX(90deg);
+  }
+  
+  .nav-link::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    background: #16c3cf;
+    padding: inherit;
+    color: #fff;
+    transform: rotateX(-90deg);
+    transform-origin: top;
+  }
+.hero{
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(135deg, rgba(0,0,0,0.9) 8%,rgba(0,0,0,0.8)100%),
+    url("img/header-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh !important;
+    width: 100%;
+    position: relative;
+}
+.hero::before{
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4.7rem;
+    background: url('img/wave-small.png') center no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+.main-message{
+    widows: 100%;
+    max-width: 50rem;
+    color:#fafafa;
+    text-transform: uppercase;
+    transition: translateY(80%);
+    margin-top: 40px;
+     
+}
+.main-message h1{
+    color: #16c3cf;
+    font-family:'Aldrich', sans-serif;
+    font-size: 30px;
+    font-weight: 500 !important;
+}
+.main-message h3{
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+/*style my buttons on banner image*/
+.btn-outline{
+    background: #16c3cf !important;
+    padding: 10px;
+    margin-right: 25px;
+    width: 150px;
+    color: #fafafa;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.btn-outline:hover{
+    color: rgb(255, 255, 255);
+}
+
+.cta{
+    margin-top: 30px;
+}
+
+@media(min-width:708px){
+    header{
+        height: 8rem;
+     
+    }
+    
+    .nav-brand{
+        width: 17.5rem;
+        margin-left: 30px;
+
+    }
+    .nav-list{
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        position: initial;
+        top: initial;
+        right: initial;
+        flex-direction: row;
+        transition: initial;
+    }
+    .menu-icons{
+        display: none;
+    }
+    .nav-item{
+        margin: 0 2.5rem;
+    }
+    /* .nav-link,
+    .current{
+        color: white;
+        position: relative;
+        font-size: 1.3rem;
+    } */
+    /* .nav-link::before,
+    .current::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -.5rem;
+        background: #eb648c;
+        width: 100%;
+        height: 2px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 658ms;
+    }
+    .current::before{
+        transform: scaleX(1);
+    }
+    .nav-link:hover::before{
+        transform: scaleX(1);
+    } */
+}
+@media(min-width:958px){
+    .hero::before{
+        height: 15.7rem;
+        background: url('img/wave-large.png');
+        background-size: cover;
+    }
+    .hero{
+        height: 100vh;
+    }
+    .nav-list{
+        width: 75%;
+    }
+}
+@media(min-width:1300px){
+    .hero{
+        height: 75vh;
+       
+    }
+    .nav{
+        width: 80%;
+    }
+    
+}
+
+
+.carousel-container{
+    width: 68%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}  
+.carousel-slide{
+    display: flex;
+    width: 100%;
+    height: 500px;
+    
+}
+.carousel-slide img{
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.content {  
+    color: #eff5d4;  
+    font-size: 30px;  
+    padding: 8px 12px;  
+    position: absolute;  
+    top: 10px;  
+    /* width: 100%;   */
+    text-align: center;  
+}  
+/* .active {  
+    background-color: #717171;  
+}  
+/* Fading animation */  
+.fade {  
+    -webkit-animation-name: fade;  
+    -webkit-animation-duration: 1.5s;  
+    animation-name: fade;  
+    animation-duration: 1.5s;  
+}  
+@-webkit-keyframes fade {  
+    from {  
+        opacity: .4  
+    }  
+    to {  
+        opacity: 1  
+    }  
+}  
+
+@keyframes fade {  
+    from {  
+        opacity: .4  
+    }  
+    to {  
+        opacity: 1  
+    }  
+}   */
+
+#prevBtn{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    z-index: 10;
+    color: rgba(49,24,131,0.9);
+    font-size: 22px;
+}
+#nextBtn{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    z-index: 10;
+    color: rgba(49,24,131,0.9);
+    font-size: 22px;
+}
