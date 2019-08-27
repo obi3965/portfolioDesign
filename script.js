@@ -10,6 +10,13 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
 
+    //our banner image parallax effect
+    let parallax = document.querySelector('#parallax');
+    window.addEventListener('scroll', function(){
+      let offset = window.pageYOffset;
+      console.log(offset);
+      parallax.style.backgroundPositionY = offset * 0.7 + "px";
+    })
 
     //CHANGING MY NAVBAR BACKGROUND COLOR ONSCROLL
     const navbar = document.querySelector('.nav')
@@ -56,7 +63,7 @@ prevBtn.addEventListener('click', ()=>{
 carouselSlide.addEventListener('transitionand',()=>{
 if(carouselImage[counter].id === 'lastClone'){
     carouselSlide.style.transition = "none";
-    counter = carouselImage.length -2;
+    counter = carouselImage.length -1;
     carouselSlide.style.transform = 'translateX(0' + (-size *counter) + 'px)';
 }
 
@@ -69,13 +76,5 @@ if(carouselImage[counter].id === 'firstClone'){
 
 
 
-Splitting.fromString("string here", {
 
-  // or 'words'
-  type: "chars", 
-
-  // true to receive an Element back instead of a String.
-  element: false 
-  
-});
 })

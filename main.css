@@ -139,7 +139,7 @@ section{
   }
 .hero{
     width: 100%;
-    height: 100vh;
+    height: 100vh !important;
     background:linear-gradient(135deg, rgba(0,0,0,0.9) 8%,rgba(0,0,0,0.8)100%),
     url("img/header-bg.jpg");
     background-position: center;
@@ -179,21 +179,110 @@ section{
     letter-spacing: 1px;
 }
 /*style my buttons on banner image*/
+
+
+
+
+
+
+
+
 .btn-outline{
-    background: #16c3cf !important;
-    padding: 10px;
-    margin-right: 25px;
-    width: 150px;
-    color: #fafafa;
+    background: #16c3cf;
+    color: white;
     text-transform: uppercase;
-    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 12px 20px;
+    margin-right: 12px;
+    font-weight: 600 !important;
+    font-size: 18px;
+    transition: background-color 650ms;
+    box-shadow: 0px 0px 20px 18px rgba(0,0,0,0.8);
+    cursor: pointer;
+    transition: all ease-in-out 300ms;
 }
 .btn-outline:hover{
-    color: rgb(255, 255, 255);
+    color: #16c3cf;
+    transform: translate(0px, -8px);
+    box-shadow: 0px 30px 15px -10px rgba(0,0,0,0.2);
+    background-color: transparent;
+    border: 1px solid #16c3cf;
+    background: rgba(0,0,0,0.6) !important;
+}
+.btn-default{
+    background: transparent;
+    color: #16c3cf;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 20px;
+    margin-left: 12px;
+    font-weight: 600 !important;
+    font-size: 18px;
+    transition: background-color 650ms;
+    border: 1px solid #16c3cf;
+    background-color: rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 20px 18px rgba(0,0,0,0.8);
+    cursor: pointer;
+    transition: all ease-in-out 300ms;
+    
+}
+.btn-default:hover{
+    color: aliceblue;
+    background-color: #16c3cf;
+    transform: translate(0px, -8px);
+    box-shadow: 0px 30px 15px -10px rgba(0,0,0,0.2);
 }
 
 .cta{
     margin-top: 30px;
+}
+
+.carousel-container{
+    width: 68%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}  
+.carousel-slide{
+    display: flex;
+    width: 100%;
+    height: 500px;
+    
+}
+.carousel-slide img{
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.content {  
+    color: #16c3cf;  
+    font-size: 30px;  
+    padding: 8px 12px;  
+    position: absolute;  
+    top: 10px;  
+    width: 100%;  
+    text-align: center;  
+}  
+
+
+
+#prevBtn{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    z-index: 10;
+    color: rgba(49,24,131,0.9);
+    font-size: 22px;
+}
+#nextBtn{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    z-index: 10;
+    color: rgba(49,24,131,0.9);
+    font-size: 22px;
 }
 
 @media(min-width:708px){
@@ -221,7 +310,7 @@ section{
         display: none;
     }
     .nav-item{
-        margin: 0 2.5rem;
+        margin: 0px 2.5rem;
     }
     /* .nav-link,
     .current{
@@ -256,93 +345,28 @@ section{
         background-size: cover;
     }
     .hero{
-        height: 100vh;
+        height: 110vh !important;
     }
     .nav-list{
         width: 75%;
     }
 }
 @media(min-width:1300px){
+    /* body{
+        background: red;
+    } */
     .hero{
-        height: 75vh;
+        height: 110vh !important;
        
     }
     .nav{
         width: 80%;
+        padding: 10px;
+    }
+    .nav-item{
+        margin-top: 11px;
     }
     
 }
 
 
-.carousel-container{
-    width: 68%;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-}  
-.carousel-slide{
-    display: flex;
-    width: 100%;
-    height: 500px;
-    
-}
-.carousel-slide img{
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-.content {  
-    color: #eff5d4;  
-    font-size: 30px;  
-    padding: 8px 12px;  
-    position: absolute;  
-    top: 10px;  
-    /* width: 100%;   */
-    text-align: center;  
-}  
-/* .active {  
-    background-color: #717171;  
-}  
-/* Fading animation */  
-.fade {  
-    -webkit-animation-name: fade;  
-    -webkit-animation-duration: 1.5s;  
-    animation-name: fade;  
-    animation-duration: 1.5s;  
-}  
-@-webkit-keyframes fade {  
-    from {  
-        opacity: .4  
-    }  
-    to {  
-        opacity: 1  
-    }  
-}  
-
-@keyframes fade {  
-    from {  
-        opacity: .4  
-    }  
-    to {  
-        opacity: 1  
-    }  
-}   */
-
-#prevBtn{
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    z-index: 10;
-    color: rgba(49,24,131,0.9);
-    font-size: 22px;
-}
-#nextBtn{
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    z-index: 10;
-    color: rgba(49,24,131,0.9);
-    font-size: 22px;
-}
