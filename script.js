@@ -18,6 +18,21 @@ document.addEventListener('DOMContentLoaded', function () {
       parallax.style.backgroundPositionY = offset * 0.7 + "px";
     })
 
+
+    //SERVICE IMAGE PARALLAX EFFECT
+    let serviceParallax = document.querySelector('#sevicesParallax');
+    window.addEventListener('scroll', function(){
+      let offset = window.pageYOffset;
+      console.log(offset);
+      serviceParallax.style.backgroundPositionY = offset * 0.7 + "px";
+    })
+    
+
+
+
+
+
+
     //CHANGING MY NAVBAR BACKGROUND COLOR ONSCROLL
     const navbar = document.querySelector('.nav')
 

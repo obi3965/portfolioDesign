@@ -164,8 +164,6 @@ section {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh !important;
-    width: 100%;
     position: relative;
 }
 
@@ -465,17 +463,18 @@ section {
 
 
 /*style my services section*/
-#services{
-    background-image:linear-gradient(135deg, rgba(0,0,0,0.8),rgba(0,0,0,0.8)100%),
-     url('file:///C:/Users/5571142/Documents/portfoliodesign/portfolioDesign/img/slider3.jpg');
+.services{
+    background-image:linear-gradient(135deg, rgba(0,0,0,0.8),rgba(0,0,0,0.8) 100%),
+     url('img/slider3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
     height: 95vh !important;
     position: relative;
+    /* background-attachment: fixed; */
 }
-#services::before {
+.services::before {
     content: '';
     position: absolute;
     left: 0;
@@ -485,7 +484,7 @@ section {
     background-size: cover;
     width: 100%;
 }
-#services{
+.services{
     border-bottom: 10px solid transparent;
     padding: 15px;
     -webkit-border-image: url('https://png.pngtree.com/png-clipart/20190124/ourlarge/pngtree-green-little-refreshing-eucalyptus-leaf-border-background-png-image_553537.jpg') round !important; /* Safari 3.1-5 */
@@ -495,7 +494,7 @@ section {
 }
 .responsive-web{
     width: 100%;
-    max-width: 50rem;
+   
     text-transform: uppercase;
     transition: translateY(50%) !important;
     margin-top: 6%;
@@ -514,6 +513,7 @@ section {
     font-weight: 600 !important;
     letter-spacing: 1px;
 }
+
 .underline3{
     border-bottom: 4px solid #16c3cf;
     width: 10%;
@@ -524,7 +524,48 @@ section {
     border-right: 1px solid #16c3cf;
     border-bottom: 1px solid #16c3cf;
     border-left: 0px solid #000;
+   
 }
+
+
+.see{
+    position: relative !important;
+    transition: all 0.5s ease-out;
+    /* background-image: url('file:///C:/Users/5571142/Documents/portfoliodesign/portfolioDesign/img/profile-pic.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+   cursor: pointer;
+   padding: 10px;
+   
+}
+.see::after{
+    content: '';
+    position: absolute;
+    width: 100% !important;
+    height: 0%;
+    background: rgb(22, 195, 207,.45);
+    bottom: 0 !important;
+    left: 0 !important;
+    z-index: -1;
+    transition:  0.5s ease-in-out;
+    
+}
+.see:hover{
+    color: white !important;
+    z-index: 1500;
+    
+}
+.see:hover::after{
+    height: 100%;
+}
+
+
+
+
+
+
+
 .border-two{
     border-top: 0px #000;
     border-right: 1px solid #16c3cf;
@@ -537,26 +578,29 @@ section {
     border-bottom: 1px solid #16c3cf;
     border-left: 0px solid #000;
 }
-.service-1-items i{
-  color: #16c3cf;
+ .see i{
+  color: white;
   font-size: 45px;
   text-align: center;
   margin-bottom: 15px;
 }
-.service-1-items p{
-    color: #16c3cf;
-    margin-top: 14px;
+ .see p{
+    color: white;
     text-align: center;
     word-break: break-all;
-    padding: 12px;
+    z-index: 1500 !important;
+    width: 70% !important;
+    padding-bottom: 20px;
+    margin:14px auto;
+} 
 
-}
-.service-1-items h2{
+.see h2{
     color: white;
     text-transform: uppercase;
     font-family: 'Aldrich', sans-serif;
     text-align: center;
     margin-top: 14px;
+    letter-spacing: 1px;
 }
 .underline4{
     border-bottom: 4px solid #16c3cf;
@@ -612,7 +656,10 @@ section {
     .nav-list {
         width: 75%;
     }
-    #services::before {
+    .services{
+        height: 100vh !important;
+    }
+    .services::before {
         content: '';
         position: absolute;
         left: 0;
