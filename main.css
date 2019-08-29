@@ -70,12 +70,12 @@ section {
     position: fixed;
     top: 0;
     right: 0;
-
+    z-index: 10;
 }
 
 .nav.active {
-    background: rgba(0, 0, 0);
-    z-index: 1500;
+    background: #000 !important;
+    z-index: 10;
 }
 
 .nav-brand {
@@ -485,7 +485,7 @@ section {
     width: 100%;
 }
 .services{
-    border-bottom: 10px solid transparent;
+    border-bottom: 10px solid transparent !important;
     padding: 15px;
     -webkit-border-image: url('https://png.pngtree.com/png-clipart/20190124/ourlarge/pngtree-green-little-refreshing-eucalyptus-leaf-border-background-png-image_553537.jpg') round !important; /* Safari 3.1-5 */
     -o-border-image: url('https://png.pngtree.com/png-clipart/20190124/ourlarge/pngtree-green-little-refreshing-eucalyptus-leaf-border-background-png-image_553537.jpg') round !important; /* Opera 11-12.1 */
@@ -531,10 +531,6 @@ section {
 .see{
     position: relative !important;
     transition: all 0.5s ease-out;
-    /* background-image: url('file:///C:/Users/5571142/Documents/portfoliodesign/portfolioDesign/img/profile-pic.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; */
    cursor: pointer;
    padding: 10px;
    
@@ -669,6 +665,9 @@ section {
         background-size: cover;
         width: 100%;
     }
+    .nav{
+        z-index: 1500;
+    }
 }
 
 @media(min-width:1300px) {
@@ -684,6 +683,7 @@ section {
     .nav {
         width: 80%;
         padding: 10px;
+        z-index: 10 !important;
     }
 
     .nav-item {
