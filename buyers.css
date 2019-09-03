@@ -1,0 +1,70 @@
+@import url('main.css');
+html {
+    font-family: 'Nunito', sans-serif;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+#buyers{
+    background: #000;
+    border-top: 10px solid transparent !important;
+    border-bottom: 10px solid transparent !important;
+    /* padding: 15px; */
+    -webkit-border-image: url('https://cdn3.volusion.com/tyzky.ynqff/v/vspfiles/photos/156-2.jpg') 30% round !important; /* Safari 3.1-5 */
+   -o-border-image: url('https://cdn3.volusion.com/tyzky.ynqff/v/vspfiles/photos/156-2.jpg') 30% round !important; /* Opera 11-12.1 */
+    border-image: url('https://cdn3.volusion.com/tyzky.ynqff/v/vspfiles/photos/156-2.jpg') 30% round !important;
+    border-image-slice: 7% !important;
+    
+}
+/* .carousel-inner{
+   height: 50vh !important;
+}
+.carousel-item{
+    height: 50vh !important;
+}
+.carousel-item img{
+    height: 100% !important;
+    width: 100% !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ */
+ #buyers h1{
+     color: #16c3cf;
+     text-transform: uppercase;
+     text-align: center;
+     padding-bottom: 15px;
+ }
+.carousel-item{
+    width: 100% !important;
+   
+}
+.slider1{
+    height: 340px;
+    width: 280px;
+    position: relative;
+    color: white;
+    background:#16c3cf;
+    border-radius: 15px;
+    margin-left: 25px;
+}
+.slider-items{
+    position: absolute;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 90% !important;
+    bottom: 20px !important;
+}
+.slider-items img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.slider-items h3{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

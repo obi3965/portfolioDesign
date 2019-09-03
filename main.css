@@ -6,6 +6,7 @@
 
 }
 
+
 body {
     margin: 0;
     padding: 0;
@@ -48,7 +49,7 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 10;
 
 
 }
@@ -70,12 +71,12 @@ section {
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 10;
+    z-index: 999 !important;
 }
 
 .nav.active {
     background: #000 !important;
-    z-index: 10;
+    z-index: 999 !important;
 }
 
 .nav-brand {
@@ -92,7 +93,7 @@ section {
 }
 
 .close i {
-    color: #eb648c;
+    color: #16c3cf;
 }
 
 .nav-list.active {
@@ -100,9 +101,9 @@ section {
 }
 
 .nav-list {
-    width: 35%;
+    width: 55%;
     height: 100vh;
-    background: rgba(49, 24, 131);
+    background: #000;
     position: absolute;
     top: 0;
     right: -25rem;
@@ -261,7 +262,7 @@ section {
 
 
 /*style my slider*/
-.carousel-container {
+/* .carousel-container {
     width: 68%;
     margin: auto;
     overflow: hidden;
@@ -280,15 +281,15 @@ section {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+   position: relative;
 }
 
 .content {
     color: #16c3cf;
     font-size: 30px;
     padding: 8px 12px;
-    position: absolute;
-    top: 10px;
+    position: absolute !important;
+    top: 10%;
     width: 100%;
     text-align: center;
 }
@@ -299,7 +300,7 @@ section {
     position: absolute;
     top: 50%;
     left: 10px;
-    z-index: 10;
+    z-index: 8;
     color: rgba(49, 24, 131, 0.9);
     font-size: 22px;
 }
@@ -308,10 +309,10 @@ section {
     position: absolute;
     top: 50%;
     right: 10px;
-    z-index: 10;
+    z-index: 8;
     color: rgba(49, 24, 131, 0.9);
     font-size: 22px;
-}
+} */
 
 
 /*style my about section*/
@@ -487,14 +488,13 @@ section {
 .services{
     border-bottom: 10px solid transparent !important;
     padding: 15px;
-    -webkit-border-image: url('https://png.pngtree.com/png-clipart/20190124/ourlarge/pngtree-green-little-refreshing-eucalyptus-leaf-border-background-png-image_553537.jpg') round !important; /* Safari 3.1-5 */
-    -o-border-image: url('https://png.pngtree.com/png-clipart/20190124/ourlarge/pngtree-green-little-refreshing-eucalyptus-leaf-border-background-png-image_553537.jpg') round !important; /* Opera 11-12.1 */
-    border-image: url('https://png.pngtree.com/png-clipart/20190124/ourlarge/pngtree-green-little-refreshing-eucalyptus-leaf-border-background-png-image_553537.jpg') round !important;
-    border-image-slice: 10% !important;
+    -webkit-border-image: url('https://cdn3.volusion.com/tyzky.ynqff/v/vspfiles/photos/156-2.jpg') 30% round !important; /* Safari 3.1-5 */
+   -o-border-image: url('https://cdn3.volusion.com/tyzky.ynqff/v/vspfiles/photos/156-2.jpg') 30% round !important; /* Opera 11-12.1 */
+    border-image: url('https://cdn3.volusion.com/tyzky.ynqff/v/vspfiles/photos/156-2.jpg') 30% round !important;
+    border-image-slice: 7% !important;
 }
 .responsive-web{
     width: 100%;
-   
     text-transform: uppercase;
     transition: translateY(50%) !important;
     margin-top: 6%;
@@ -535,25 +535,16 @@ section {
    padding: 10px;
    
 }
-.see::after{
-    content: '';
+.see{
     position: absolute;
     width: 100% !important;
     height: 0%;
     background: rgb(22, 195, 207,.45);
     bottom: 0 !important;
     left: 0 !important;
-    z-index: -1;
+    
     transition:  0.5s ease-in-out;
     
-}
-.see:hover{
-    color: white !important;
-    z-index: 1500;
-    
-}
-.see:hover::after{
-    height: 100%;
 }
 
 
@@ -584,7 +575,6 @@ section {
     color: white;
     text-align: center;
     word-break: break-all;
-    z-index: 1500 !important;
     width: 70% !important;
     padding-bottom: 20px;
     margin:14px auto;
@@ -609,7 +599,9 @@ section {
         height: 8rem;
 
     }
-
+    .nav{
+        z-index: 1500 !important;
+    }
     .nav-brand {
         width: 17.5rem;
         margin-left: 30px;
@@ -666,7 +658,7 @@ section {
         width: 100%;
     }
     .nav{
-        z-index: 1500;
+        z-index: 1500 !important;
     }
 }
 
@@ -683,7 +675,7 @@ section {
     .nav {
         width: 80%;
         padding: 10px;
-        z-index: 10 !important;
+        z-index: 1500 !important;
     }
 
     .nav-item {
