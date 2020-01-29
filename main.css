@@ -3,7 +3,7 @@
 *::after {
     margin: 0;
     padding: 0;
-
+    
 }
 
 
@@ -11,12 +11,14 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: rgb(2,22,37);
 }
 
 html {
     font-family: 'Nunito', sans-serif;
     font-size: 10px;
     box-sizing: border-box;
+    background-color: rgb(2,22,37);
 }
 
 a {
